@@ -7,4 +7,42 @@ class Application < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-end
+
+  # get '/' do
+
+  #   name = params[:name] # The value is 'David'
+
+  #   # Do something with `name`...
+  
+  #   return "Hello #{name}"
+  # end
+
+  # get '/posts' do 
+  #   name = params[:name]
+
+  #   return "Hello #{name}"
+  # end 
+
+  # post '/posts' do
+  #   name = params[:name]
+  #   return "Hello #{name}"
+  # end 
+
+  # post '/submit' do
+  #   name = params[:name]
+  #   message = params[:message]
+
+  #   return "Thanks #{name}, you sent this message: #{message}"
+
+  # end
+
+  get '/names' do
+    name_1 = params[:name_1]
+    name_2 = params[:name_2]
+    name_3 = params[:name_3]
+  
+    return "#{name_1} #{name_2} #{name_3}"
+
+  end
+
+end 
